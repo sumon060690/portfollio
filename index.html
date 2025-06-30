@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sumon | Software Testing Portfolio</title>
+  <title>Sumon| Software Testing Portfolio</title>
+   <link rel="icon" href="./assets/icon/logos.png" type="image/x-icon" />
   <style>
     /* Reset & basics */
     * {
@@ -38,7 +39,7 @@
 
     /* Header */
     header {
-      background-color: #222;
+      background-color: #48636e;
       color: white;
       padding: 15px 0;
       position: sticky;
@@ -65,7 +66,7 @@
     }
 
     nav a:hover {
-      color: #00bcd4;
+      color: #48636e;
     }
 
     /* Hero Section */
@@ -75,7 +76,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 60px 20px;
-      background: #00bcd4;
+      background: #5c7d8a;
       color: white;
       padding: 40px;
     }
@@ -181,15 +182,71 @@
       color: #555;
     }
 
-    /* About Me */
-    .about-text {
-      max-width: 750px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-      color: #444;
-      line-height: 1.7;
+ /* About section style */
+   .about-section {
+    background-color: #f1f5f9;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .about-text {
+    flex: 1 1 60%;
+  }
+
+  .about-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1e293b;
+    border-left: 5px solid #facc15;
+    padding-left: 12px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #334155;
+  }
+
+  .about-img {
+    flex: 1 1 35%;
+    text-align: center;
+  }
+
+  .about-img img {
+    max-width: 250px;
+    border-radius: 10px;
+    border: 3px solid #facc15;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
       text-align: center;
     }
+
+    .about-text h2 {
+      font-size: 28px;
+      padding-left: 0;
+      border-left: none;
+    }
+
+    .about-img img {
+      max-width: 180px;
+      margin-top: 20px;
+    }
+  }
 
     /* Profile Photo Section */
     .profile-photo-section {
@@ -224,6 +281,88 @@
         margin-top: 25px;
       }
     }
+    /* footer style design */
+      .footer {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    padding: 40px 20px 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .footer h3,
+  .footer h4 {
+    color: #facc15;
+    margin-bottom: 10px;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-links ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-links ul li a {
+    text-decoration: none;
+    color: #cbd5e1;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links ul li a:hover {
+    color: #facc15;
+  }
+
+  .footer-contact p {
+    margin: 5px 0;
+  }
+
+  .social-icons a img {
+    width: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .social-icons a img:hover {
+    transform: scale(1.2);
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #1e293b;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .social-icons a img {
+      margin: 0 8px;
+    }
+  }
   </style>
 </head>
 
@@ -246,9 +385,7 @@
     <div class="hero-text">
       <h2>Hi, I am Md. Zafor Iqbal Sumon</h2>
       <p>
-        Experienced Software Tester | Manual & Automation Testing Expert <br />
-        Skilled in Selenium, WebdriverIO, Postman, JMeter, and Documentation tools like Jira & Excel. <br />
-        Proficient in JavaScript and Python programming basics.
+         Experienced Software Tester with expertise in both Manual and Automation Testing. Proficient in using tools such as Selenium, WebdriverIO, Postman, and JMeter for comprehensive testing solutions. Skilled in documenting test cases and processes using Jira and Excel. Adept at scripting and automation with foundational knowledge in JavaScript and Python, bringing a strong technical edge to quality assurance practices.
       </p>
     </div>
     <div class="hero-photo">
@@ -306,20 +443,58 @@
     </div>
   </section>
 
-  <section id="about">
-    <h3>About Me</h3>
-    <p class="about-text">
-      I am passionate about software quality and dedicated to delivering thorough testing
-      with attention to detail. I enjoy learning new technologies and improving automation
-      skills to make testing more efficient and effective.
-    </p>
-  </section>
+<!-- ======= About Me Section Start ======= -->
+<section id="about" class="about-section">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm <strong>Sumon</strong>, a passionate and detail-oriented <strong>Junior SQA Engineer</strong> with hands-on experience in both <strong>manual</strong> and <strong>automation testing</strong>. I specialize in using tools like <strong>Selenium, WebdriverIO, Postman, JMeter</strong>, and maintain clear documentation with <strong>Jira</strong> and <strong>Excel</strong>.
+      </p>
+      <p>
+        I enjoy ensuring software quality by designing test cases, identifying bugs early, and collaborating with developers to improve performance and reliability. I also have a good foundation in <strong>JavaScript</strong> and <strong>Python</strong>, which helps in automation scripting and test logic building.
+      </p>
+      <p>
+        I'm always eager to learn new technologies and grow as a QA professional, with the ultimate goal of delivering seamless user experiences through thorough testing.
+      </p>
+    </div>
+    <div class="about-img">
+      <img src="./assets/My images.jpg" alt="Profile Photo of Sumon" />
+    </div>
+  </div>
+</section>
 
-  <section class="profile-photo-section" id="profile">
-    <h3>My Profile Photo</h3>
-    <img src="https://i.pravatar.cc/300" alt="Sumon's Profile Photo" />
-  </section>
 
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Sumon</h3>
+      <p>Junior SQA Engineer<br>Manual & Automation Testing | Selenium | Postman | JMeter</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>Email: sumon@example.com</p>
+      <p>Phone: +8801XXXXXXXXX</p>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="LinkedIn" /></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="GitHub" /></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Sumon. All rights reserved.</p>
+  </div>
+</footer>
   <script>
     // Optional: Smooth scrolling for anchor links
     document.querySelectorAll('nav a').forEach(anchor => {
